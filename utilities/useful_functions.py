@@ -3,6 +3,8 @@ import numpy as np
 import datetime
 import seaborn as sns
 import matplotlib.pyplot as plt
+import emoji
+import re
 
 from wordcloud import WordCloud
 from langdetect import detect, detect_langs
@@ -105,6 +107,45 @@ def detect_language_safe(text):
         return detect(text)
     except LangDetectException:
         return "unknown"
+
+
+
+
+def count_emojis(text):
+    """
+    Calculate the number of emojis in a given text.
+    
+    Args:
+        text (str): Input text.
+        
+    Returns:
+        int: Count of emojis in the text.
+    """
+    if not isinstance(text, str):
+        return 0  # Return 0 for non-string inputs
+    
+    # Extract emojis from text
+    emojis = [char for char in text if char in emoji.EMOJI_DATA]
+    return len(emojis)
+
+
+
+def count_special_characters(text):
+    """
+    Calculate the number of special characters in a given text.
+    
+    Args:
+        text (str): Input text.
+        
+    Returns:
+        int: Count of special characters in the text.
+    """
+    if not isinstance(text, str):
+        return 0  # Return 0 for non-string inputs
+    
+    # Define special characters (excluding alphanumeric and whitespace)
+    special_chars = re.findall(r"[^a-zA-Z0-9\s\u0400-\u04FF]", text)
+    return len(special_chars)
 
 
 
