@@ -10,6 +10,8 @@ file_ids = {
     'kyiv_digital_sentiment_annotation': '1RXjgI8u7A6_FsjI3O52sMLS8X0gI8K7P',
     'emotions_sentiment_youscan': '1gP8weiLFJyyzyBzL1-TvO-fbHpRap-mv',
     'dataset_5-1': '1Xu_1hh80gjSxLN4rgQ6dhqHfZjlRRD9E',
+    'yahoo_reviews': '1RUICT82eZIMxMx93zxqohhG0dJosdoVW',
+    'telegram_disinformation': '1l_sc8JplNAx2dPoN75o9EhZF_oarRcAl'
 }
 
 
