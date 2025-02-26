@@ -11,7 +11,8 @@ file_ids = {
     'emotions_sentiment_youscan': '1gP8weiLFJyyzyBzL1-TvO-fbHpRap-mv',
     'dataset_5-1': '1Xu_1hh80gjSxLN4rgQ6dhqHfZjlRRD9E',
     'yahoo_reviews': '1RUICT82eZIMxMx93zxqohhG0dJosdoVW',
-    'telegram_disinformation': '1l_sc8JplNAx2dPoN75o9EhZF_oarRcAl'
+    'telegram_disinformation': '1l_sc8JplNAx2dPoN75o9EhZF_oarRcAl',
+    'sentiment_news': '1XQ2ZljZDa9V2mSFMBdDP1Prxs_uVqw16',
 }
 
 
@@ -47,7 +48,6 @@ def download_datasets(file_ids, destination_folder):
             print(f"Downloaded {dataset_name} to {destination_path}")
         except Exception as e:
             print(f"Failed to download {dataset_name}: {e}")
-
 
 
 
